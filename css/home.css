@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CABEÇALHO */
+
+header{
+   width: 100%;
+   height: 50px;
+   background-color: gray;
+      
+}
+
+body{
+    background-image: url(https://cdn.shopify.com/s/files/1/0305/4075/9177/products/N06174_1.jpg?v=1610356792);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    text-align: center;
+    
+}
+
+#logo{
+    margin-left: 10px;
+}
+
+#logo:hover{
+    color: palevioletred;
+}
+
+#menumaior{
+    list-style: none;
+    display: flex;
+    font-size: 10;
+    margin-right: 10px;
+        
+}
+
+li{
+    background-color: blueviolet;
+    border-left: 1px solid whitesmoke;
+    width: 100px;
+    
+}
+
+#menu ul ul{
+    position: absolute;
+    visibility: hidden;
+    
+}
+
+#menu ul li:hover ul{
+    
+    list-style: none;
+    font-size: 14px;
+    visibility: visible;
+    display: block;
+}
+
+#menu ul li:hover li{
+    border: 1px solid white;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+a:hover{
+    cursor: pointer;
+    color: burlywood;
+
+}
+
+a:active{
+    cursor: wait;
+    color: orange;
+}
+
+/* CONTEÚDO EM TEXTO */
+
+.titulo{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.conteudo{
+    margin: 10px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+}
+
+#texto{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: flex-start;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+#cachorrinho{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* FORMULÁRIO */
+
+.box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    border: 1px solid black;
+    width: 40%;
+    height: 80%;
+    align-items: center;
+}
+
+#feliz{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 28%;
+    justify-content: space-around;
+}
+
+#formulario{
+    align-items: center;
+    margin: 5px;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+form input{
+    width: 100%;
+}
+
+form label{
+    padding-top: 10px;
+}
+
+
+
+/* MEDIA QUERIE */
+
+@media (max-width: 700px){
+
+    header{
+        height: 83px;
+        
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 20px;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    #menu{
+        width: 100%;
+    }
+
+    ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;              
+    }
+
+    li{
+        display: flex;
+        flex-direction: column;
+        background-color: violet;
+        border-bottom: 1px solid white;
+        width: 100%;
+        
+    }
+
+    .conteudo{
+        display: block;
+        
+    }
+
+    #texto{
+        width: 90%;
+        margin: 10px;
+    }
+
+    #texto img{
+        width: auto;
+        height: auto;
+    }
+
+    .box{
+        margin: 1px;
+        width: 95%;
+    }
+
+    #formulario{
+        align-items: center;
+        border: 1px solid blue;
+        margin: 30px;
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
