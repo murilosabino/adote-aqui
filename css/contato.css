@@ -14,6 +14,8 @@ header{
 }
 
 body{
+    
+    height: 100%;
     background-image: url(https://cdn.shopify.com/s/files/1/0305/4075/9177/products/N06174_1.jpg?v=1610356792);
     background-color: rgba(255, 255, 255, 0.8);
     background-blend-mode: lighten;
@@ -21,10 +23,12 @@ body{
 }
 
 .container{
+    min-height: 100%;
     display: flex;
     justify-content: space-between;
     line-height: 50px;
     text-align: center;
+    position: relative;
     
 }
 
@@ -33,7 +37,7 @@ body{
 }
 
 #logo:hover{
-    color: palevioletred;
+    color: white;
 }
 
 #menumaior{
@@ -41,7 +45,12 @@ body{
     display: flex;
     font-size: 10;
     margin-right: 10px;
-        
+    transition: font-size 0.2s;
+}
+
+#menumaior a:hover{
+    font-size: 17px;
+
 }
 
 li{
@@ -76,13 +85,14 @@ nav a{
     
 }
 
-a:hover{
-    cursor: pointer;
-    color: burlywood;
 
-}
-
-a:active{
-    cursor: wait;
-    color: orange;
+footer{
+    font-size: 12px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
 }
