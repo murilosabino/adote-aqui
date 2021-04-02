@@ -26,7 +26,49 @@
             </div>
         </div>
     </header>
-    Em construção
+    <main>
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" class="input-padrao">
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="input-padrao">
+
+            <label for="tel">Telefone</label>
+            <input type="text" name="tel" id="tel" class="input-padrao">
+
+            <label for="msg">Mensagem</label>
+            <textarea name="msg" id="msg" cols="80" rows="10" class="input-padrao"></textarea>
+
+            <div id="pergunta">
+                <p>Como quer ser contatado?</p>
+                <label for="r-email"><input type="radio" value="email" id="r-email" name="contato">E-mail</label>
+                
+                <label for="r-wpp"><input type="radio" value="wpp" id="r-wpp" name="contato">WhatsApp</label>
+                
+                <label for="r-tel"><input type="radio" value="tel" id="r-tel" name="contato">Telefone</label>
+                
+                <input type="submit" value="Enviar" id="enviar">
+            </div><br>
+
+            <div id="horario">
+                <p>Qual o melhor horário para ser contatado?</p>
+                <select name="selecione" id="selecione">
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+            </div>
+
+            <label for=""><input type="checkbox"> Gostaria de receber atualizações do AdoteAqui?</label><br>
+            
+        </form>
+
+        <div id="imagem">
+            <img src="https://img.clasf.com.br/2020/03/14/Gato-amarelo-filhote-para-adoo-20200314215222.7646810015.jpg" alt="Foto de um gatinho fofo">
+        </div>
+
+    </main>
 
     <footer>
         <p>&copy; AdoteAqui - Todos os direitos reservados.</p>

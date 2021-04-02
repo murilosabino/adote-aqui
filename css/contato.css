@@ -1,21 +1,22 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
+	box-sizing: border-box;
 }
-
 /* CABEÇALHO */
+
+html, body {height: 100%;}
 
 header{
    width: 100%;
    height: 50px;
-   background-color: gray;
+   background-color: #A6808C;
       
 }
 
 body{
-    
-    height: 100%;
+    margin: 0;
     background-image: url(https://cdn.shopify.com/s/files/1/0305/4075/9177/products/N06174_1.jpg?v=1610356792);
     background-color: rgba(255, 255, 255, 0.8);
     background-blend-mode: lighten;
@@ -27,8 +28,7 @@ body{
     display: flex;
     justify-content: space-between;
     line-height: 50px;
-    text-align: center;
-    
+    text-align: center    
 }
 
 #logo{
@@ -36,64 +36,103 @@ body{
 }
 
 #logo:hover{
+    font-weight: bold;
     color: white;
 }
+
 
 #menumaior{
     list-style: none;
     display: flex;
     font-size: 10;
     margin-right: 10px;
+        
+}
+
+li{
+    box-sizing: border-box;
+    background-color:#D6CFCB;
+    width: 100px;
+    
+}
+
+#menumaior a{
+    color: #565264;
+    text-decoration: none;
+    text-transform: uppercase;
     transition: font-size 0.2s;
 }
 
 #menumaior a:hover{
     font-size: 17px;
 
+
 }
 
-li{
-    background-color: blueviolet;
-    border-left: 1px solid whitesmoke;
-    width: 100px;
-    
+a:active{
+    cursor: wait;
+    color: orange;
 }
 
-#menu ul ul{
-    position: absolute;
-    visibility: hidden;
-    
+main{
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    margin: 0 auto;
 }
 
-#menu ul li:hover ul{
-    
-    list-style: none;
-    font-size: 14px;
-    visibility: visible;
+form{
+    margin-top: 4px;    
+    width: 50%;
+}
+
+form label, form p{
     display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
-#menu ul li:hover li{
-    border: 1px solid white;
+.input-padrao{
+    border: 1px solid black;
+    display: block;
+    margin-bottom: 15px;
+    width: 85%;
 }
 
-nav a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    
+
+form #enviar{
+    border: 1px solid black;
+    width: 10%;
 }
 
+#pergunta{
+    display: flex;
+    flex-direction: column;
+}
+
+#horario select{
+    border: 1px solid black;
+}
+
+#imagem{
+    padding: 5%;
+}
+
+#imagem img{
+    box-shadow: 5px 5px black;
+}
 
 footer{
+    color: #565264;
+    bottom: 0;
     font-size: 12px;
     text-align: center;
     padding: 20px 0;
     width: 100%;
     height: 50px;
-    background-color: gray;
-    position: absolute;
-    bottom: 0;
+    background-color: #A6808C;
+    
 }
 
 /* MEDIA QUERIE */
@@ -121,6 +160,10 @@ footer{
         width: 100%;
     }
 
+    #menumaior a{
+        color: #565264;
+    }
+
     ul{
         width: 100%;
         display: flex;
@@ -131,64 +174,10 @@ footer{
     li{
         display: flex;
         flex-direction: column;
-        background-color: violet;
+        background-color: #A6808C;
         border-bottom: 1px solid white;
         width: 100%;
         
-    }
-
-    .conteudo{
-        display: block;
-        
-    }
-
-    #texto{
-        width: 90%;
-        margin: 10px;
-    }
-
-    #texto img{
-        width: auto;
-        height: auto;
-    }
-
-    .box{
-        margin: 1px;
-        width: 95%;
-    }
-
-    #formulario{
-        align-items: center;
-        margin: 30px;
-        height: 100%;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #feliz{
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        height: 10%;
-        width: 45%;
-        justify-content: space-around;
-    }
-
-    #cachorrinho{
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    #cachorrinho img{
-        margin: 20px;
-        width: 80%;
-        height: auto;
-    }   
-
-    
+    }    
 
 }

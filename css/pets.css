@@ -1,20 +1,22 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
+	box-sizing: border-box;
 }
-
 /* CABEÇALHO */
+
+html, body {height: 100%;}
 
 header{
    width: 100%;
    height: 50px;
-   background-color: gray;
+   background-color: #A6808C;
       
 }
 
 body{
-    height: 100%;
+    margin: 0;
     background-image: url(https://cdn.shopify.com/s/files/1/0305/4075/9177/products/N06174_1.jpg?v=1610356792);
     background-color: rgba(255, 255, 255, 0.8);
     background-blend-mode: lighten;
@@ -26,9 +28,7 @@ body{
     display: flex;
     justify-content: space-between;
     line-height: 50px;
-    text-align: center;
-    position: relative;
-    
+    text-align: center    
 }
 
 #logo{
@@ -36,58 +36,60 @@ body{
 }
 
 #logo:hover{
+    font-weight: bold;
     color: white;
 }
+
 
 #menumaior{
     list-style: none;
     display: flex;
     font-size: 10;
     margin-right: 10px;
+        
+}
+
+li{
+    box-sizing: border-box;
+    background-color:#D6CFCB;
+    width: 100px;
+    
+}
+
+#menumaior a{
+    color: #565264;
+    text-decoration: none;
+    text-transform: uppercase;
     transition: font-size 0.2s;
 }
 
 #menumaior a:hover{
     font-size: 17px;
+
+
 }
 
-li{
-    background-color: blueviolet;
-    border-left: 1px solid whitesmoke;
-    width: 100px;
+a:active{
+    cursor: wait;
+    color: orange;
+}
+
+
+footer{
+    color: #565264;
+    bottom: 0;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 50px;
+    background-color: #A6808C;
     
 }
 
-#menu ul ul{
-    position: absolute;
-    visibility: hidden;
-    
-}
-
-#menu ul li:hover ul{
-    
-    list-style: none;
-    font-size: 14px;
-    visibility: visible;
-    display: block;
-}
-
-#menu ul li:hover li{
-    border: 1px solid white;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    
-}
-
-
-#conteudo
 
 #imagens{
-    
+    justify-content: space-around;
     margin: 5px;
     width: 99%;
     display: flex;
@@ -100,16 +102,12 @@ nav a{
     width: 22%;
     height: 250px;
     border-radius: 15%;
+    transition: border 1s;
 }
 
-footer{
-    font-size: 12px;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    height: 50px;
-    background-color: gray;
-    bottom: 0;
+#imagens img:hover{
+    border: 1px solid #565264;
+    
 }
 
 @media (max-width: 700px){
@@ -134,6 +132,10 @@ footer{
         width: 100%;
     }
 
+    #menumaior a{
+        color: #565264;
+    }
+
     ul{
         width: 100%;
         display: flex;
@@ -144,25 +146,31 @@ footer{
     li{
         display: flex;
         flex-direction: column;
-        background-color: violet;
+        background-color: #A6808C;
         border-bottom: 1px solid white;
         width: 100%;
         
     }
 
+    #box{
+        display: flex;
+        justify-content: center;
+    }
+
     #imagens{
         margin: 5px;
-        width: 99%;
+        width: 100%;
         display: block;
         align-items: center;
-        
+        justify-content: center;
     }
     
     #imagens img{
+        display: block;
         align-items: center;
-        margin-left: 5px;
+        margin: 5px auto;
         padding: 5px;
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 
