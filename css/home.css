@@ -74,7 +74,7 @@ li{
     margin-top: -10px;
     visibility: hidden;
     opacity: 0;
-    transition: heigth 0s, visibility 0s, opacity 1s;
+    transition: heigth 0s, visibility 0s, opacity 0.9s;
     height: 0;
 }
 
