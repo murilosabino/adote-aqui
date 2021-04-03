@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/home.css">
     <title>Home</title>
+    <script src="../funcao.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
                 <nav>
                     <ul id="menumaior">
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="sobre.html">Sobre</a>
+                        <li>Sobre
                             <ul>
                                 <li><a href="#">Menu1</a></li>
                                 <li><a href="#">Menu2</a></li>
@@ -70,12 +71,13 @@
                             <label for="estado">Estado: </label>
                             <input type="text" name="estado" id="estado"><br>
                             <div class="botao">
-                                <a href="https://odnet.com.br/wp-content/uploads/2019/07/obrigado.jpg">
-                                Enviar</a> 
+                                <button type="button" onclick="funcao()">Enviar</button>
+                                <p id="botaomostra"></p>
                             </div>
                         </form>
                     </div>
                 </div>
+                
     </div>
 
     <footer>

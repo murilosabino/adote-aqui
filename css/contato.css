@@ -20,6 +20,7 @@ body{
     background-image: url(https://cdn.shopify.com/s/files/1/0305/4075/9177/products/N06174_1.jpg?v=1610356792);
     background-color: rgba(255, 255, 255, 0.8);
     background-blend-mode: lighten;
+    width: 100%;
 
 }
 
@@ -57,16 +58,17 @@ li{
     
 }
 
-#menumaior a{
-    display: block;
+#menumaior a, #menumaior li{
     color: #565264;
     text-decoration: none;
     text-transform: uppercase;
     transition: font-size 0.2s;
+    cursor: pointer;
 }
 
 #menumaior a:hover{
     font-size: 17px;
+    cursor: pointer;
 }
 
 #menumaior > li > ul{
@@ -77,18 +79,13 @@ li{
     visibility: hidden;
     height: 0;
     opacity: 0;
-    transition: height 0s, visibility 0s, opacity 1s;
+    transition: height 0s, visibility 0s, opacity 0.3s;
 }
 
 #menumaior > li:hover ul{
     height: auto;
     visibility: visible;
     opacity: 1;
-}
-
-a:active{
-    cursor: wait;
-    color: orange;
 }
 
 main{
@@ -101,7 +98,6 @@ main{
 form{
     margin-top: 4px;    
     width: 50%;
-    z-index: -2;
 }
 
 form label, form legend{
@@ -140,9 +136,11 @@ form #enviar{
 
 #imagem img{
     box-shadow: 5px 5px black;
+    width: 90%;
 }
 
 footer{
+    position: relative;
     color: #565264;
     bottom: 0;
     font-size: 12px;
@@ -167,19 +165,20 @@ footer{
         display: flex;
         flex-direction: row;
         flex-flow: column wrap;
-        width: 99%;
+        width: 100%;
         margin: 0 auto;
     }
 
     form{
-        width: 99%;
+        width: 100%;
     }
 
     .container{
-        width: 100%;
+        position: relative;
+        min-height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;        
         line-height: 20px;
     }
 
@@ -221,5 +220,8 @@ footer{
     #imagem img{
         box-shadow: 5px 5px black;
     }
-
+    
+    footer{
+        width: 100%;
+    }
 }

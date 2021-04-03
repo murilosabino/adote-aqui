@@ -56,16 +56,19 @@ li{
     
 }
 
-#menumaior a{
+#menumaior a, #menumaior li{
     color: #565264;
     text-decoration: none;
     text-transform: uppercase;
     transition: font-size 0.2s;
+    cursor: pointer;
 }
 
-#menumaior a:hover{
+#menumaior li:hover{
     font-size: 17px;
+    cursor: pointer;
 }
+
 
 #menumaior > li > ul{
     list-style: none;
@@ -74,7 +77,7 @@ li{
     margin-top: -10px;
     visibility: hidden;
     opacity: 0;
-    transition: heigth 0s, visibility 0s, opacity 0.9s;
+    transition: heigth 0s, visibility 0s, opacity 0.3s;
     height: 0;
 }
 
@@ -84,10 +87,6 @@ li{
     height: auto;
 }
 
-a:active{
-    cursor: wait;
-    color: orange;
-}
 
 footer{
     color: #565264;
@@ -199,19 +198,20 @@ form label{
 }
 
 .botao{
-    display: flex;
+    display: block;
     justify-content: space-around;
     width: 100%;
 }
 
-.botao a{
+.botao button{
     color: black;
     text-decoration: none;
     text-align:center;
     border: 1px solid black;
     width: 30%;
+    margin-bottom: 10px;
+    
 }
-
 
 
 
@@ -246,6 +246,12 @@ form label{
     #menumaior > li > ul{
         position: relative;
         margin-top: 0px;
+    }
+
+    #menumaior > li:active ul{
+        visibility: visible;
+        opacity: 1;
+        height: auto;
     }
 
     ul{
