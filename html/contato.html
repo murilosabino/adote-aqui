@@ -18,8 +18,14 @@
                 <nav>
                     <ul id="menumaior">
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="pets.html">Pets</a></li>
+                        <li><a href="sobre.html">Sobre</a>
+                            <ul>
+                                <li><a href="#">Menu1</a></li>
+                                <li><a href="#">Menu2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pets.html">Pets</a>
+                        </li>
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </nav>
@@ -29,27 +35,27 @@
     <main>
         <form>
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" class="input-padrao">
+            <input type="text" name="nome" id="nome" class="input-padrao" required placeholder="Seu nome">
 
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" class="input-padrao">
+            <input type="email" name="email" id="email" class="input-padrao" required placeholder="seuemail@email.com">
 
             <label for="tel">Telefone</label>
-            <input type="text" name="tel" id="tel" class="input-padrao">
+            <input type="text" name="tel" id="tel" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
 
             <label for="msg">Mensagem</label>
-            <textarea name="msg" id="msg" cols="80" rows="10" class="input-padrao"></textarea>
+            <textarea name="msg" id="msg" cols="80" rows="10" class="input-padrao" required></textarea>
 
-            <div id="pergunta">
-                <p>Como quer ser contatado?</p>
+            <fieldset id="pergunta">
+                <legend>Como quer ser contatado?</legend>
                 <label for="r-email"><input type="radio" value="email" id="r-email" name="contato">E-mail</label>
                 
-                <label for="r-wpp"><input type="radio" value="wpp" id="r-wpp" name="contato">WhatsApp</label>
+                <label for="r-wpp"><input type="radio" value="wpp" id="r-wpp" name="contato" checked>WhatsApp</label>
                 
                 <label for="r-tel"><input type="radio" value="tel" id="r-tel" name="contato">Telefone</label>
                 
                 <input type="submit" value="Enviar" id="enviar">
-            </div><br>
+            </fieldset><br>
 
             <div id="horario">
                 <p>Qual o melhor horário para ser contatado?</p>

@@ -65,8 +65,23 @@ li{
 
 #menumaior a:hover{
     font-size: 17px;
+}
 
+#menumaior > li > ul{
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: -10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: heigth 0s, visibility 0s, opacity 1s;
+    height: 0;
+}
 
+#menumaior > li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
 }
 
 a:active{
@@ -103,6 +118,7 @@ footer{
         align-items: center;
         justify-content: center;
         line-height: 20px;
+        position: relative;
     }
 
     #logo{
@@ -132,10 +148,16 @@ footer{
         width: 100%;
     }
 
+    #menumaior > li > ul{
+        position: relative;
+        margin-top: 0px;
+    }
+
     .conteudo{
         display: block;
         
     }
+
 
     #texto{
         width: 90%;

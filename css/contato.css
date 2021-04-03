@@ -41,12 +41,13 @@ body{
 }
 
 
+
 #menumaior{
     list-style: none;
     display: flex;
     font-size: 10;
     margin-right: 10px;
-        
+    margin-bottom: 5px;
 }
 
 li{
@@ -57,6 +58,7 @@ li{
 }
 
 #menumaior a{
+    display: block;
     color: #565264;
     text-decoration: none;
     text-transform: uppercase;
@@ -65,8 +67,23 @@ li{
 
 #menumaior a:hover{
     font-size: 17px;
+}
 
+#menumaior > li > ul{
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: -10px;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0s, visibility 0s, opacity 1s;
+}
 
+#menumaior > li:hover ul{
+    height: auto;
+    visibility: visible;
+    opacity: 1;
 }
 
 a:active{
@@ -84,9 +101,10 @@ main{
 form{
     margin-top: 4px;    
     width: 50%;
+    z-index: -2;
 }
 
-form label, form p{
+form label, form legend{
     display: block;
     margin-top: 10px;
     font-size: 20px;
@@ -117,6 +135,7 @@ form #enviar{
 
 #imagem{
     padding: 5%;
+
 }
 
 #imagem img{
@@ -144,6 +163,18 @@ footer{
         
     }
 
+    main{
+        display: flex;
+        flex-direction: row;
+        flex-flow: column wrap;
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    form{
+        width: 99%;
+    }
+
     .container{
         width: 100%;
         display: flex;
@@ -160,8 +191,9 @@ footer{
         width: 100%;
     }
 
-    #menumaior a{
-        color: #565264;
+    #menumaior > li > ul{
+        margin-top: 0;
+        position: relative;
     }
 
     ul{
@@ -179,5 +211,15 @@ footer{
         width: 100%;
         
     }    
+
+    #imagem{
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+    }
+    
+    #imagem img{
+        box-shadow: 5px 5px black;
+    }
 
 }
